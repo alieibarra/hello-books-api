@@ -1,7 +1,7 @@
 from app import db
 
 class Event(db.Model):
-    id = db.Column(db.Integer, primary_key=True, autoincriment=True)
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     title = db.Column(db.String, nullable=False)
     date = db.Column(db.DateTime, nullable=False)
     
