@@ -54,6 +54,8 @@ def update_task(id):
         task.dueDate = request_body["dueDate"]
     if "priority" in request_body:
         task.priority = request_body["priority"]
+    if "status" in request_body:
+        task.status = request_body["status"]
     db.session.commit()
     return jsonify([task.to_dict(), "Update Successful"])
 
